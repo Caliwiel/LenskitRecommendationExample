@@ -21,8 +21,10 @@ Le fichier `build.gradle` contient la définition du projet et de ses dépendanc
 ## Building and Running
 
 Pour lancer le projet, spécifiez l'algorithme que vous souhaitez utiliser parmi :
-    * user pour User User collaborative filtering
-    * item pour Item Item collaborative filtering
-    * matrix pour Matrix Factorization
-    * slope pour Slope-One
+
+* user pour User User collaborative filtering
+* item pour Item Item collaborative filtering
+* matrix pour Matrix Factorization
+* slope pour Slope-One
+
 Puis, le numéro de l'utilisateur pour lequel vous voulez générer une recommendation
