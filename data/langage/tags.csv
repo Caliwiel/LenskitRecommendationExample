@@ -1,0 +1,19 @@
+userId,langageId,tag,timestamp
+1,1,Extra Good,0
+4,1,Plutôt bon,0
+1,2,Plutôt bon,0
+2,3,Bon,0
+3,3,Plutôt bon,0
+4,3,Bon,0
+2,4,Extra Bon,0
+3,4,Extra Bon,0
+5,4,Plutôt Bon,0
+3,5,Bon,0
+2,6,Plutôt Bon plus,0
+3,6,Plutôt Bon,0
+5,6,Plutôt Bon,0
+1,7,Plutôt Bon,0
+2,8,Plutôt Mauvais,0
+4,9,Bon,0
+4,10,Extra Bon,0
+5,10,Bon,0
