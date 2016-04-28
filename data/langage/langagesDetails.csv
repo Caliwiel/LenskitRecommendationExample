@@ -1,4 +1,4 @@
-langageId,nom,java,uml,management,quality
+langageId,nom,java,uml,management,qualite
 1,Data Structures in Java,1,1,0,0
 2,Object Relational Mapping,1,1,0,0
 3,Software Architectures,0,1,0,0
@@ -9,3 +9,4 @@ langageId,nom,java,uml,management,quality
 8,UML and the UP,0,1,0,0
 9,Class Diagrams,0,1,0,0
 10,OO Complexity Metrics,1,1,0,0
+11,Projet,1,1,1,1

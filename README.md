@@ -1,59 +1,30 @@
-# LensKit Demo Project
+# Projet Domaine Informatique recommandation avec LensKit
 
-[![Join the chat at https://gitter.im/lenskit/lenskit](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/lenskit/lenskit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-This is a demo project that shows how to create a project using [LensKit][] and set
-get the recommender running.  It creates a simple command line application that
-builds a recommender from a delimited text file of ratings, then recommends items
-for users specified at the command line.
+Ceci est un projet de démonstration utilisant [LensKit][]. Il génère une recommandation
+de domaine informatique pour un utilisateur donné.
 
-The main code is in `org.grouplens.lenskit.hello.HelloLenskit`. There are comments
-so you can follow along and see what each stage of the process does.
+Ce code est basé sur `org.grouplens.lenskit.hello.HelloLenskit`. Il a été adpaté à notre
+démarche.
 
-If you are building a web application, you will need to adapt this project. But the
-basic things done in that class will need to be done in your application somewhere.
-
-The [LensKit home page][LensKit] has further documentation for LensKit, as well as
-links to our bug tracker and wiki. Also be sure to subscribe to our [mailing list][]
-and ask any further questions you may have about using LensKit, and follow our
-[Twitter account][LensKitRS] for updates on new releases and developments.
+Lenskit Home page et documentation : [LensKit home page][LensKit]
 
 ## Project Setup
 
-This project uses [Gradle][gradle] for build and dependency management. It is
-easy to import into an IDE; Gradle support is included with or available for
-NetBeans, IntelliJ IDEA, and Eclipse.  These IDEs will import your project directly
-from the Gradle `build.gradle` file and set up the build and dependencies.
+Ce projet utilise [Gradle][gradle] pour la construction du projet et la gestion de la dépendance.
+L'importation est simple dans un IDE ; Gradle est inclus ou disponible sur NetBeans , IntelliJ IDEA
+et Eclipse . Ces IDEs importeront directement votre projet du fichier `build.gradle` et mettront en place
+la construction et les dépendances .
 
-The `build.gradle` file contains the project definition and its dependencies. Review
-this for how we pull in LensKit, and how to depend on other modules.
+Le fichier `build.gradle` contient la définition du projet et de ses dépendances .
 
 ## Building and Running
 
-In the Gradle build, we use the Application plugin to create a shell script and copy
-the dependency JARs in order to run the LensKit application.
+Pour lancer le projet, le numéro de l'utilisateur pour lequel vous voulez générer une recommendation
 
-LensKit Hello runs on a copy of the MovieLens Latest Small data set, included in the `data` directory.
-More up-to-date versions of this data set, along with a larger data set of 20M ratings, can be downloaded
-from <http://grouplens.org/datasets/movielens/>.
+Puis, spécifiez l'algorithme que vous souhaitez utiliser parmi :
 
-You can run lenskit-hello through your IDE, or from the command line
-as follows:
-
-    $ ./gradlew build
-    $ /bin/sh build/install/lenskit-hello/bin/lenskit-hello <userid>
-    
-If you are on Windows, do:
-
-    C:\LensKit\lenskit-hello> .\gradlew.bat build
-    C:\LensKit\lenskit-hello> .\build\install\lenskit-hello\bin\lenskit-hello.bat <userid>
-
-A user ID of 72 is valid and good for a quick demo.  You can specify more than one user ID, and it will
-produce recommendations for each user.
-
-Have fun!
-
-[LensKit]: http://lenskit.org
-[gradle]: http://gradle.org
-[mailing list]: https://wwws.cs.umn.edu/mm-cs/listinfo/lenskit
-[LensKitRS]: http://twitter.com/LensKitRS
+* user pour User User collaborative filtering
+* item pour Item Item collaborative filtering
+* matrix pour Matrix Factorization
+* slope pour Slope-One

@@ -21,13 +21,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Responsable on 25/04/2016.
- * Demonstration app for LensKit. This application builds an item-item CF model
- * from a CSV file, then generates recommendations for a user.
+ * Created by Responsable=Elodie (haha!) on 25/04/2016.
+ * Démonstration de Lenskit. L'application construit un model de recommendation
+ * à partir de fichier CSV, puis génère une recommandation pour un utilisateur
  * <p/>
- * Usage: java org.grouplens.lenskit.hello.HelloLenskit ratings.csv user
  */
+
 public class PalanqueExample implements Runnable {
+
+    /**
+     * Main méthode pour lancer la recommandation on
+     * 26/04/2016.
+     * @param args
+     * L'algo choisi et l'id utilisateur pour lequel
+     * on fait la recommandation.
+     */
     public static void main(String[] args) {
         PalanqueExample hello = new PalanqueExample(args);
         try {
@@ -40,13 +48,33 @@ public class PalanqueExample implements Runnable {
         }
     }
 
-    private String delimiter = "\t";
+    //private String delimiter = "\t";
+    /**
+     * Fichier en entrée avec les notes utilisateurs pour les items
+     */
     private File inputFile = new File("data/langage/ratings.csv");
-    //private File movieFile = new File("data/langage/langages.csv");
-    private File movieFile = new File("data/langage/langagesDetails.csv");
+
+    /**
+     * Fichier en entrée pour les items et leurs caractérisques
+     */
+    private File movieFile = new File("data/langage/langages.csv");
+
+    /**
+     * L'algorithme choisi
+     */
     private String algo;
+
+    /**
+     * Les utilisateurs pour lesquels on produit la recommandation
+     */
     private List<Long> users;
 
+    /**
+     * Constructeur
+     * @param args
+     * L'algo choisi et l'id utilisateur pour lequel
+     * on fait la recommandation.
+     */
     public PalanqueExample(String[] args) {
         users = new ArrayList<Long>(args.length);
         algo = args[0];
@@ -56,11 +84,15 @@ public class PalanqueExample implements Runnable {
         }
     }
 
+    /**
+     * Lancer la recommandation
+     * Les commentaires explicatifs de la suite sont issus de l'exemple
+     * donné par Lenskit : hello lenskit
+     */
     public void run() {
         // We first need to configure the data access.
         // We will use a simple delimited file; you can use something else like
         // a database (see JDBCRatingDAO).
-        //EventDAO dao = TextEventDAO.create(inputFile, Formats.movieLensLatest());
         EventDAO dao = TextEventDAO.create(inputFile, Formats.movieLensLatest());
         ItemNameDAO names;
         try {
@@ -89,7 +121,6 @@ public class PalanqueExample implements Runnable {
         // Add our data component to the configuration
         config.addComponent(dao);
 
-
         // There are more parameters, roles, and components that can be set. See the
         // JavaDoc for each recommender algorithm for more information.
 
@@ -103,8 +134,8 @@ public class PalanqueExample implements Runnable {
             // we want to recommend items
             ItemRecommender irec = rec.getItemRecommender();
             assert irec != null; // not null because we configured one
+            System.out.println("Algo utilisé : "+ algo);
             // for users
-            System.out.println("Nb users : "+ users.size());
             for (long user : users) {
                 // get 10 recommendation for the user
                 ResultList recs = irec.recommendWithDetails(user, 10, null, null);
@@ -114,6 +145,7 @@ public class PalanqueExample implements Runnable {
                     System.out.format("\t%d (%s): %.2f\n", item.getId(), name, item.getScore());
                 }
             }
+            System.out.println("Fin exécution ");
         }
     }
 }
