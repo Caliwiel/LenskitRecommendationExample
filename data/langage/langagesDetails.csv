@@ -8,4 +8,5 @@ langageId,nom,java,uml,management,qualite
 7,Object Oriented Design,1,1,0,0
 8,UML and the UP,0,1,0,0
 9,Class Diagrams,0,1,0,0
-9,OO Complexity Metrics,1,1,0,0
+10,OO Complexity Metrics,1,1,0,0
+11,Projet,1,1,1,1

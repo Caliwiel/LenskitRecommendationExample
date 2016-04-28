@@ -145,6 +145,7 @@ public class PalanqueExample implements Runnable {
                     System.out.format("\t%d (%s): %.2f\n", item.getId(), name, item.getScore());
                 }
             }
+            System.out.println("Fin exécution ");
         }
     }
 }
