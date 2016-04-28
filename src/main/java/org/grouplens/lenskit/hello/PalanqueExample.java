@@ -42,7 +42,8 @@ public class PalanqueExample implements Runnable {
 
     private String delimiter = "\t";
     private File inputFile = new File("data/langage/ratings.csv");
-    private File movieFile = new File("data/langage/langages.csv");
+    //private File movieFile = new File("data/langage/langages.csv");
+    private File movieFile = new File("data/langage/langagesDetails.csv");
     private String algo;
     private List<Long> users;
 
@@ -59,6 +60,7 @@ public class PalanqueExample implements Runnable {
         // We first need to configure the data access.
         // We will use a simple delimited file; you can use something else like
         // a database (see JDBCRatingDAO).
+        //EventDAO dao = TextEventDAO.create(inputFile, Formats.movieLensLatest());
         EventDAO dao = TextEventDAO.create(inputFile, Formats.movieLensLatest());
         ItemNameDAO names;
         try {
