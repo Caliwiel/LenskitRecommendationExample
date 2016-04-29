@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.grouplens.lenskit.demos.lenskit_test;
+package org.grouplens.lenskit.ihm;
 
 import java.awt.BorderLayout;
 import javax.swing.JComboBox;
