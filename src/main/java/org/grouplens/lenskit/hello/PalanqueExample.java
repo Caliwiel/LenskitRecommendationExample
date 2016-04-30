@@ -70,6 +70,11 @@ public class PalanqueExample implements Runnable {
     private List<Long> users;
 
     /**
+     * Liste des recommandations
+     */
+    private ResultList recommandations;
+
+    /**
      * Constructeur
      * @param args
      * L'algo choisi et l'id utilisateur pour lequel
@@ -82,6 +87,15 @@ public class PalanqueExample implements Runnable {
             if(!arg.equals(algo))
                 users.add(Long.parseLong(arg));
         }
+    }
+
+    /**
+     * Getter des recommandations
+     * @return
+     * Les recommandations pour l'utilisateur choisi
+     */
+    public ResultList getRecommandations() {
+        return recommandations;
     }
 
     /**
@@ -115,6 +129,7 @@ public class PalanqueExample implements Runnable {
             } else {
                 config = ConfigHelpers.load(new File("etc/item-item.groovy"));
             }
+
         } catch (IOException e) {
             throw new RuntimeException("could not load configuration", e);
         }
@@ -139,6 +154,8 @@ public class PalanqueExample implements Runnable {
             for (long user : users) {
                 // get 10 recommendation for the user
                 ResultList recs = irec.recommendWithDetails(user, 10, null, null);
+                this.recommandations = recs;
+
                 System.out.format("Recommendations for user %d:\n", user);
                 for (Result item : recs) {
                     String name = names.getItemName(item.getId());
