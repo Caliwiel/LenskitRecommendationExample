@@ -13,6 +13,7 @@ repositories {
 }
 dependencies {
     compile 'org.grouplens.lenskit:lenskit-all:3.0-T1'
+    testCompile 'junit:junit:4.12'
     runtime 'ch.qos.logback:logback-classic:1.1.2'
     runtime 'org.fusesource.jansi:jansi:1.8'
 }
