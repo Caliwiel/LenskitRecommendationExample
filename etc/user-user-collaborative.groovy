@@ -1,4 +1,5 @@
 import org.grouplens.lenskit.transform.normalize.BaselineSubtractingUserVectorNormalizer
+import org.grouplens.lenskit.transform.normalize.DefaultUserVectorNormalizer
 import org.grouplens.lenskit.transform.normalize.MeanCenteringVectorNormalizer
 import org.grouplens.lenskit.transform.normalize.UserVectorNormalizer
 import org.grouplens.lenskit.transform.normalize.VectorNormalizer
@@ -16,12 +17,13 @@ import org.lenskit.knn.user.UserUserItemScorer
  * Created by Responsable on 26/04/2016.
  */
 bind ItemScorer to UserUserItemScorer.class
+//set MinNeighbors to 1
 // use item-user mean when user-user fails
 bind (BaselineScorer,ItemScorer) to UserMeanItemScorer
 bind (UserMeanBaseline,ItemScorer) to ItemMeanRatingItemScorer
 // normalize by subtracting the user's mean rating
 within (UserVectorNormalizer) {
-    // for normalization, just center on user means
-    bind VectorNormalizer to MeanCenteringVectorNormalizer
+     //for normalization, just center on user means
+  bind VectorNormalizer to MeanCenteringVectorNormalizer
 }
-set NeighborhoodSize to 30
+//set NeighborhoodSize to 2
