@@ -22,7 +22,7 @@ public class Ihm extends javax.swing.JFrame {
     public Ihm() {
         initComponents();
         getContentPane().add(pUser, BorderLayout.SOUTH);
-
+        this.setTitle("LenskitExample");
 
     }
 
@@ -38,12 +38,17 @@ public class Ihm extends javax.swing.JFrame {
         pUser = new javax.swing.JPanel();
         lNbUser = new javax.swing.JLabel();
         cbNumUser = cbNumUser = new JComboBox<String>();
-        ;
         panelBoutons = new javax.swing.JPanel();
         pUserUser = new javax.swing.JPanel();
         bUserUser = new javax.swing.JButton();
         pItemItem = new javax.swing.JPanel();
         bItemItem = new javax.swing.JButton();
+        pUserItem = new javax.swing.JPanel();
+        bUserItem = new javax.swing.JButton();
+        pItemMatrix = new javax.swing.JPanel();
+        bItemMatrix = new javax.swing.JButton();
+        pItemSlope = new javax.swing.JPanel();
+        bItemSlope = new javax.swing.JButton();
         pMatrixFactorisation = new javax.swing.JPanel();
         bMatrixFactorisation = new javax.swing.JButton();
         pSlopeOne = new javax.swing.JPanel();
@@ -58,12 +63,14 @@ public class Ihm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(433, 339));
 
-        panelBoutons.setLayout(new java.awt.GridLayout(4, 1));
+        panelBoutons.setLayout(new java.awt.GridLayout(7, 1));
 
         bUserUser.setText("User User Collaborative Filtering");
-        bUserUser.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bUserUserMouseClicked(evt);
+        bUserUser.setMnemonic('1');
+        bUserUser.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bUserUserActionPerformed(evt);
             }
         });
 
@@ -87,9 +94,11 @@ public class Ihm extends javax.swing.JFrame {
         panelBoutons.add(pUserUser);
 
         bItemItem.setText("Item Item Collaborative Filtering");
-        bItemItem.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bItemItemMouseClicked(evt);
+        bItemItem.setMnemonic('2');
+        bItemItem.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bItemItemActionPerformed(evt);
             }
         });
 
@@ -113,9 +122,11 @@ public class Ihm extends javax.swing.JFrame {
         panelBoutons.add(pItemItem);
 
         bMatrixFactorisation.setText("Matrix Factorisation");
-        bMatrixFactorisation.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bMatrixFactorisationMouseClicked(evt);
+        bMatrixFactorisation.setMnemonic('3');
+        bMatrixFactorisation.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bMatrixFactorisationActionPerformed(evt);
             }
         });
 
@@ -139,6 +150,7 @@ public class Ihm extends javax.swing.JFrame {
         panelBoutons.add(pMatrixFactorisation);
 
         bSlopeOne.setText("Slope-One");
+        bSlopeOne.setMnemonic('4');
         bSlopeOne.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bSlopeOneMouseClicked(evt);
@@ -164,6 +176,90 @@ public class Ihm extends javax.swing.JFrame {
 
         panelBoutons.add(pSlopeOne);
 
+        bUserItem.setText("User-Item");
+        bUserItem.setMnemonic('5');
+        bUserItem.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bUserItemActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pUserItemLayout = new javax.swing.GroupLayout(pUserItem);
+        pUserItem.setLayout(pUserItemLayout);
+        pUserItemLayout.setHorizontalGroup(
+                pUserItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pUserItemLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bUserItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+        pUserItemLayout.setVerticalGroup(
+                pUserItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pUserItemLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bUserItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+
+        panelBoutons.add(pUserItem);
+
+        bItemMatrix.setText("Item-Matrix");
+        bItemMatrix.setMnemonic('6');
+        bItemMatrix.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bItemMatrixActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pItemMatrixLayout = new javax.swing.GroupLayout(pItemMatrix);
+        pItemMatrix.setLayout(pItemMatrixLayout);
+        pItemMatrixLayout.setHorizontalGroup(
+                pItemMatrixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pItemMatrixLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bItemMatrix, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+        pItemMatrixLayout.setVerticalGroup(
+                pItemMatrixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pItemMatrixLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bItemMatrix, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+
+        panelBoutons.add(pItemMatrix);
+
+        bItemSlope.setText("Item-Slope");
+        bItemSlope.setMnemonic('7');
+        bItemSlope.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bItemSlopeActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pItemSlopeLayout = new javax.swing.GroupLayout(pItemSlope);
+        pItemSlope.setLayout(pItemSlopeLayout);
+        pItemSlopeLayout.setHorizontalGroup(
+                pItemSlopeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pItemSlopeLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bItemSlope, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+        pItemSlopeLayout.setVerticalGroup(
+                pItemSlopeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pItemSlopeLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bItemSlope, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+
+        panelBoutons.add(pItemSlope);
+
         getContentPane().add(panelBoutons, java.awt.BorderLayout.CENTER);
 
         pack();
@@ -178,18 +274,33 @@ public class Ihm extends javax.swing.JFrame {
         return args;
     }
 
-    private void bUserUserMouseClicked(java.awt.event.MouseEvent evt) {
+    private void bUserUserActionPerformed(java.awt.event.ActionEvent evt) {
         Example ex = new Example(getSelectedParameters("user"));
         ex.run();
     }
 
-    private void bItemItemMouseClicked(java.awt.event.MouseEvent evt) {
+    private void bItemItemActionPerformed(java.awt.event.ActionEvent evt) {
         Example ex = new Example(getSelectedParameters("item"));
         ex.run();
     }
 
-    private void bMatrixFactorisationMouseClicked(java.awt.event.MouseEvent evt) {
+    private void bMatrixFactorisationActionPerformed(java.awt.event.ActionEvent evt) {
         Example ex = new Example(getSelectedParameters("matrix"));
+        ex.run();
+    }
+
+    private void bUserItemActionPerformed(java.awt.event.ActionEvent evt) {
+        Example ex = new Example(getSelectedParameters("useritem"));
+        ex.run();
+    }
+
+    private void bItemMatrixActionPerformed(java.awt.event.ActionEvent evt) {
+        Example ex = new Example(getSelectedParameters("itemmatrix"));
+        ex.run();
+    }
+
+    private void bItemSlopeActionPerformed(java.awt.event.ActionEvent evt) {
+        Example ex = new Example(getSelectedParameters("itemslope"));
         ex.run();
     }
 
@@ -238,6 +349,9 @@ public class Ihm extends javax.swing.JFrame {
     private javax.swing.JButton bMatrixFactorisation;
     private javax.swing.JButton bSlopeOne;
     private javax.swing.JButton bUserUser;
+    private javax.swing.JButton bUserItem;
+    private javax.swing.JButton bItemMatrix;
+    private javax.swing.JButton bItemSlope;
     private javax.swing.JComboBox<String> cbNumUser;
     private javax.swing.JLabel lNbUser;
     private javax.swing.JPanel pItemItem;
@@ -246,5 +360,8 @@ public class Ihm extends javax.swing.JFrame {
     private javax.swing.JPanel pUser;
     private javax.swing.JPanel pUserUser;
     private javax.swing.JPanel panelBoutons;
+    private javax.swing.JPanel pUserItem;
+    private javax.swing.JPanel pItemMatrix;
+    private javax.swing.JPanel pItemSlope;
     // End of variables declaration//GEN-END:variables
 }

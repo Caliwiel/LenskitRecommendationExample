@@ -22,10 +22,10 @@ public class RecommenderEngineItemSlope extends RecommenderEngine {
         LenskitRecommenderEngine engine = null;
         try {
 
-            LenskitConfiguration config = ConfigHelpers.load(new File("etc/item-item-collaborative.groovy"));
             LenskitConfiguration config2 = ConfigHelpers.load(new File("etc/slope-one.groovy"));
+            LenskitConfiguration config = ConfigHelpers.load(new File("etc/item-item-collaborative.groovy"));
             config.addComponent(dao);
-            engine = LenskitRecommenderEngine.newBuilder().addConfiguration(config2).addConfiguration(config).build();
+            engine = LenskitRecommenderEngine.newBuilder().addConfiguration(config).addConfiguration(config2).build();
         } catch (IOException e) {
             e.printStackTrace();
         }
