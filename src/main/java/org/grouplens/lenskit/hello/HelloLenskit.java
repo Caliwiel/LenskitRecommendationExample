@@ -65,12 +65,17 @@ public class HelloLenskit implements Runnable {
     private File inputFile = new File("data/ratings.csv");
     private File movieFile = new File("data/movies.csv");
     private List<Long> users;
+    private ResultList recommandations;
 
     public HelloLenskit(String[] args) {
         users = new ArrayList<Long>(args.length);
         for (String arg : args) {
             users.add(Long.parseLong(arg));
         }
+    }
+
+    public ResultList getRecommandations() {
+        return recommandations;
     }
 
     public void run() {
@@ -113,6 +118,8 @@ public class HelloLenskit implements Runnable {
             for (long user : users) {
                 // get 10 recommendation for the user
                 ResultList recs = irec.recommendWithDetails(user, 10, null, null);
+                this.recommandations=recs;
+
                 System.out.format("Recommendations for user %d:\n", user);
                 for (Result item : recs) {
                     String name = names.getItemName(item.getId());

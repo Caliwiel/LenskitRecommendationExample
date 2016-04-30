@@ -15,11 +15,11 @@ public class TestDonneesEntrees {
     @org.junit.Test
     public void testDonneesEntrees (){
         try{
-            InputStream fluxTest = new FileInputStream("/home/anais/IdeaProjects/LenskitRecommendationExample/src/test/java/org/grouplens/lenskit/hello/ressources/ratingsTests.csv");
+            InputStream fluxTest = new FileInputStream("C:\\Users\\Responsable\\Documents\\M1_INFORMATIQUE\\Lenskit-example-knn\\lenskit-hello-master\\src\\test\\java\\org\\grouplens\\lenskit\\hello\\ressources\\ratingsTests.csv");
             InputStreamReader ipsrTest = new InputStreamReader(fluxTest);
             BufferedReader brTest = new BufferedReader(ipsrTest);
 
-            InputStream flux = new FileInputStream("/home/anais/IdeaProjects/LenskitRecommendationExample/data/langage/ratings.csv");
+            InputStream flux = new FileInputStream("C:\\Users\\Responsable\\Documents\\M1_INFORMATIQUE\\Lenskit-example-knn\\lenskit-hello-master\\data\\langage\\ratings.csv");
             InputStreamReader ipsr = new InputStreamReader(flux);
             BufferedReader br = new BufferedReader(ipsr);
 

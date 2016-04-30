@@ -19,7 +19,7 @@ public class ExampleTest {
         //Given
         String[] args = new String[2];
         args[0] = "user";
-        args[1] = "1";
+        args[1] = "5";
         Example example = new Example(args);
         //When
         ResultList[] recs = new ResultList[NB_RECS];
@@ -38,7 +38,7 @@ public class ExampleTest {
         //Given
         String[] args = new String[2];
         args[0] = "user";
-        args[1] = "1";
+        args[1] = "5";
         Example example = new Example(args);
         //When
         example.run();
@@ -47,4 +47,18 @@ public class ExampleTest {
             assertNotNull(rec.getScore());
         }
     }
+
+    @org.junit.Test
+    public void plusieursRecommandations() {
+        //Given
+        String[] args = new String[2];
+        args[0] = "user";
+        args[1] = "5";
+        Example example = new Example(args);
+        //When
+        example.run();
+        //Then
+        assertTrue(example.getRecommandations().size()>=1);
+    }
+
 }
