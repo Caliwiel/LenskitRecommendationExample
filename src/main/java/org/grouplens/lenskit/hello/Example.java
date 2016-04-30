@@ -5,6 +5,7 @@ import org.grouplens.lenskit.data.text.TextEventDAO;
 import org.lenskit.LenskitConfiguration;
 import org.lenskit.LenskitRecommender;
 import org.lenskit.LenskitRecommenderEngine;
+import org.lenskit.ModelDisposition;
 import org.lenskit.api.ItemRecommender;
 import org.lenskit.api.Result;
 import org.lenskit.api.ResultList;
@@ -113,34 +114,24 @@ public class Example implements Runnable {
             throw new RuntimeException("cannot load names", e);
         }
 
-        // Next: load the LensKit algorithm configuration
-        LenskitConfiguration config = null;
-        try {
-            if (algo.equals("item")) {
-                config = ConfigHelpers.load(new File("etc/item-item-collaborative.groovy"));
-            } else if (algo.equals("user")) {
-                config = ConfigHelpers.load(new File("etc/user-user-collaborative.groovy"));
-            } else if (algo.equals("matrix")) {
-                config = ConfigHelpers.load(new File("etc/matrix-factorization.groovy"));
-            } else if (algo.equals("slope")) {
-                config = ConfigHelpers.load(new File("etc/slope-one.groovy"));
-            } else {
-                config = ConfigHelpers.load(new File("etc/item-item.groovy"));
-            }
+        LenskitRecommenderEngine engine = null;
 
-        } catch (IOException e) {
-            throw new RuntimeException("could not load configuration", e);
+        if (algo.equals("item")) {
+            engine = new RecommenderEngineItemItem(dao).getRecommender();
+        } else if (algo.equals("user")) {
+            engine = new RecommenderEngineUserUser(dao).getRecommender();
+        } else if (algo.equals("matrix")) {
+            engine = new RecommenderEngineMatrix(dao).getRecommender();
+        } else if (algo.equals("slope")) {
+            engine = new RecommenderEngineSlope(dao).getRecommender();
+        } else if (algo.equals("useritem")) {
+            engine = new RecommenderEngineUserItem(dao).getRecommender();
+        } else if (algo.equals("itemmatrix")){
+            engine = new RecommenderEngineItemMatrix(dao).getRecommender();
         }
-        // Add our data component to the configuration
-        config.addComponent(dao);
-
-        // There are more parameters, roles, and components that can be set. See the
-        // JavaDoc for each recommender algorithm for more information.
-
-        // Now that we have a configuration, build a recommender engine from the configuration
-        // and data source. This will compute the similarity matrix and return a recommender
-        // engine that uses it.
-        LenskitRecommenderEngine engine = LenskitRecommenderEngine.build(config);
+        else {
+            engine = new RecommenderEngineItemItem(dao).getRecommender();
+        }
 
         // Finally, get the recommender and use it.
         try (LenskitRecommender rec = engine.createRecommender()) {
@@ -160,7 +151,6 @@ public class Example implements Runnable {
                     System.out.format("\t%d (%s): %.2f\n", item.getId(), name, item.getScore());
                 }
             }
-            System.out.println("Fin exécution ");
         }
     }
 }
