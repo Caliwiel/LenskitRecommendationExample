@@ -22,7 +22,7 @@ public class Ihm extends javax.swing.JFrame {
     public Ihm() {
         initComponents();
         getContentPane().add(pUser, BorderLayout.SOUTH);
-
+        this.setTitle("LenskitExample");
 
     }
 
