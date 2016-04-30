@@ -1,9 +1,18 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package org.grouplens.lenskit.ihm;
 
-import org.grouplens.lenskit.hello.PalanqueExample;
+import org.grouplens.lenskit.hello.Example;
+
+import java.awt.BorderLayout;
+import javax.swing.JComboBox;
 
 /**
- * Created by anais on 26/04/16.
+ *
+ * @author Julien
  */
 public class Ihm extends javax.swing.JFrame {
 
@@ -12,6 +21,9 @@ public class Ihm extends javax.swing.JFrame {
      */
     public Ihm() {
         initComponents();
+        getContentPane().add(pUser, BorderLayout.SOUTH);
+
+
     }
 
     /**
@@ -23,91 +35,142 @@ public class Ihm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jUserUserCollaborativeFiltering = new javax.swing.JButton();
-        jItemItemCollaborativeFiltering = new javax.swing.JButton();
-        jMatrixFactorization = new javax.swing.JButton();
-        jSlopeOne = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
-        jLabel1 = new javax.swing.JLabel();
+        pUser = new javax.swing.JPanel();
+        lNbUser = new javax.swing.JLabel();
+        cbNumUser = cbNumUser = new JComboBox<String>();
+        ;
+        panelBoutons = new javax.swing.JPanel();
+        pUserUser = new javax.swing.JPanel();
+        bUserUser = new javax.swing.JButton();
+        pItemItem = new javax.swing.JPanel();
+        bItemItem = new javax.swing.JButton();
+        pMatrixFactorisation = new javax.swing.JPanel();
+        bMatrixFactorisation = new javax.swing.JButton();
+        pSlopeOne = new javax.swing.JPanel();
+        bSlopeOne = new javax.swing.JButton();
+
+        lNbUser.setText("Numéro d'utilisateur : ");
+        pUser.add(lNbUser);
+
+        cbNumUser.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "1", "2", "3", "4", "5" }));
+        pUser.add(cbNumUser);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(433, 339));
 
-        jUserUserCollaborativeFiltering.setText("User User Collaborative Filtering");
-        jUserUserCollaborativeFiltering.setToolTipText("");
-        jUserUserCollaborativeFiltering.addMouseListener(new java.awt.event.MouseAdapter() {
+        panelBoutons.setLayout(new java.awt.GridLayout(4, 1));
+
+        bUserUser.setText("User User Collaborative Filtering");
+        bUserUser.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jUserUserCollaborativeFilteringMouseClicked(evt);
+                bUserUserMouseClicked(evt);
             }
         });
 
-
-        jItemItemCollaborativeFiltering.setText("Item Item Collaborative Filtering");
-        jItemItemCollaborativeFiltering.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jItemItemCollaborativeFilteringMouseClicked(evt);
-            }
-        });
-
-        jMatrixFactorization.setText("Matrix Factorisation");
-        jMatrixFactorization.setActionCommand("Matrix Factorization");
-        jMatrixFactorization.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMatrixFactorizationMouseClicked(evt);
-            }
-        });
-
-        jSlopeOne.setText("Slope-One");
-        jSlopeOne.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jSlopeOneMouseClicked(evt);
-            }
-        });
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5" }));
-
-        jLabel1.setText("Numéro d'utilisateur :");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jUserUserCollaborativeFiltering, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jItemItemCollaborativeFiltering, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jSlopeOne, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jMatrixFactorization, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel1)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(154, Short.MAX_VALUE))
+        javax.swing.GroupLayout pUserUserLayout = new javax.swing.GroupLayout(pUserUser);
+        pUserUser.setLayout(pUserUserLayout);
+        pUserUserLayout.setHorizontalGroup(
+                pUserUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pUserUserLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bUserUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
         );
-        layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(70, 70, 70)
-                                .addComponent(jUserUserCollaborativeFiltering)
-                                .addGap(18, 18, 18)
-                                .addComponent(jItemItemCollaborativeFiltering)
-                                .addGap(18, 18, 18)
-                                .addComponent(jMatrixFactorization)
-                                .addGap(18, 18, 18)
-                                .addComponent(jSlopeOne)
-                                .addGap(28, 28, 28)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel1)
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(36, Short.MAX_VALUE))
+        pUserUserLayout.setVerticalGroup(
+                pUserUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pUserUserLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bUserUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
         );
+
+        panelBoutons.add(pUserUser);
+
+        bItemItem.setText("Item Item Collaborative Filtering");
+        bItemItem.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bItemItemMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pItemItemLayout = new javax.swing.GroupLayout(pItemItem);
+        pItemItem.setLayout(pItemItemLayout);
+        pItemItemLayout.setHorizontalGroup(
+                pItemItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pItemItemLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bItemItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+        pItemItemLayout.setVerticalGroup(
+                pItemItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pItemItemLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bItemItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+
+        panelBoutons.add(pItemItem);
+
+        bMatrixFactorisation.setText("Matrix Factorisation");
+        bMatrixFactorisation.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bMatrixFactorisationMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pMatrixFactorisationLayout = new javax.swing.GroupLayout(pMatrixFactorisation);
+        pMatrixFactorisation.setLayout(pMatrixFactorisationLayout);
+        pMatrixFactorisationLayout.setHorizontalGroup(
+                pMatrixFactorisationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pMatrixFactorisationLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bMatrixFactorisation, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+        pMatrixFactorisationLayout.setVerticalGroup(
+                pMatrixFactorisationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMatrixFactorisationLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bMatrixFactorisation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+
+        panelBoutons.add(pMatrixFactorisation);
+
+        bSlopeOne.setText("Slope-One");
+        bSlopeOne.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bSlopeOneMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pSlopeOneLayout = new javax.swing.GroupLayout(pSlopeOne);
+        pSlopeOne.setLayout(pSlopeOneLayout);
+        pSlopeOneLayout.setHorizontalGroup(
+                pSlopeOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pSlopeOneLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bSlopeOne, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+        pSlopeOneLayout.setVerticalGroup(
+                pSlopeOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pSlopeOneLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bSlopeOne, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+
+        panelBoutons.add(pSlopeOne);
+
+        getContentPane().add(panelBoutons, java.awt.BorderLayout.CENTER);
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private String[] getSelectedParameters(String algo) {
-        String num = jComboBox1.getSelectedItem().toString();
+        String num = cbNumUser.getSelectedItem().toString();
         System.out.println(num);
         String[] args = new String[2];
         args[0] = algo;
@@ -115,25 +178,25 @@ public class Ihm extends javax.swing.JFrame {
         return args;
     }
 
-    private void jUserUserCollaborativeFilteringMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jUserUserCollaborativeFilteringMouseClicked
-        PalanqueExample ex = new PalanqueExample(getSelectedParameters("user"));
+    private void bUserUserMouseClicked(java.awt.event.MouseEvent evt) {
+        Example ex = new Example(getSelectedParameters("user"));
         ex.run();
     }
 
-    private void jItemItemCollaborativeFilteringMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jItemItemCollaborativeFilteringMouseClicked
-        PalanqueExample ex = new PalanqueExample(getSelectedParameters("item"));
+    private void bItemItemMouseClicked(java.awt.event.MouseEvent evt) {
+        Example ex = new Example(getSelectedParameters("item"));
         ex.run();
-    }//GEN-LAST:event_jItemItemCollaborativeFilteringMouseClicked
+    }
 
-    private void jMatrixFactorizationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMatrixFactorizationMouseClicked
-        PalanqueExample ex = new PalanqueExample(getSelectedParameters("matrix"));
+    private void bMatrixFactorisationMouseClicked(java.awt.event.MouseEvent evt) {
+        Example ex = new Example(getSelectedParameters("matrix"));
         ex.run();
-    }//GEN-LAST:event_jMatrixFactorizationMouseClicked
+    }
 
-    private void jSlopeOneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSlopeOneMouseClicked
-        PalanqueExample ex = new PalanqueExample(getSelectedParameters("slope"));
+    private void bSlopeOneMouseClicked(java.awt.event.MouseEvent evt) {
+        Example ex = new Example(getSelectedParameters("slope"));
         ex.run();
-    }//GEN-LAST:event_jSlopeOneMouseClicked
+    }
 
     /**
      * @param args the command line arguments
@@ -169,12 +232,19 @@ public class Ihm extends javax.swing.JFrame {
             }
         });
     }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JButton jItemItemCollaborativeFiltering;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton jMatrixFactorization;
-    private javax.swing.JButton jSlopeOne;
-    private javax.swing.JButton jUserUserCollaborativeFiltering;
+    private javax.swing.JButton bItemItem;
+    private javax.swing.JButton bMatrixFactorisation;
+    private javax.swing.JButton bSlopeOne;
+    private javax.swing.JButton bUserUser;
+    private javax.swing.JComboBox<String> cbNumUser;
+    private javax.swing.JLabel lNbUser;
+    private javax.swing.JPanel pItemItem;
+    private javax.swing.JPanel pMatrixFactorisation;
+    private javax.swing.JPanel pSlopeOne;
+    private javax.swing.JPanel pUser;
+    private javax.swing.JPanel pUserUser;
+    private javax.swing.JPanel panelBoutons;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,7 +2,6 @@ package org.grouplens.lenskit.hello;
 
 import org.grouplens.lenskit.data.text.Formats;
 import org.grouplens.lenskit.data.text.TextEventDAO;
-import org.grouplens.lenskit.scored.ScoredId;
 import org.lenskit.LenskitConfiguration;
 import org.lenskit.LenskitRecommender;
 import org.lenskit.LenskitRecommenderEngine;
@@ -13,7 +12,6 @@ import org.lenskit.config.ConfigHelpers;
 import org.lenskit.data.dao.EventDAO;
 import org.lenskit.data.dao.ItemNameDAO;
 import org.lenskit.data.dao.MapItemNameDAO;
-import sun.security.krb5.Config;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,7 +25,7 @@ import java.util.List;
  * <p/>
  */
 
-public class PalanqueExample implements Runnable {
+public class Example implements Runnable {
 
     /**
      * Main méthode pour lancer la recommandation on
@@ -37,7 +35,7 @@ public class PalanqueExample implements Runnable {
      * on fait la recommandation.
      */
     public static void main(String[] args) {
-        PalanqueExample hello = new PalanqueExample(args);
+        Example hello = new Example(args);
         try {
             System.out.println("début");
             hello.run();
@@ -80,7 +78,7 @@ public class PalanqueExample implements Runnable {
      * L'algo choisi et l'id utilisateur pour lequel
      * on fait la recommandation.
      */
-    public PalanqueExample(String[] args) {
+    public Example(String[] args) {
         users = new ArrayList<Long>(args.length);
         algo = args[0];
         for (String arg : args) {
