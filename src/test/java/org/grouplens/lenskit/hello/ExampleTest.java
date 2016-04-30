@@ -1,5 +1,6 @@
 package org.grouplens.lenskit.hello;
 
+import org.lenskit.api.Result;
 import org.lenskit.api.ResultList;
 
 import java.util.List;
@@ -32,4 +33,18 @@ public class ExampleTest {
         }
     }
 
+    @org.junit.Test
+    public void justificationRecommandation() {
+        //Given
+        String[] args = new String[2];
+        args[0] = "user";
+        args[1] = "1";
+        Example example = new Example(args);
+        //When
+        example.run();
+        //Then
+        for (Result rec : example.getRecommandations()) {
+            assertNotNull(rec.getScore());
+        }
+    }
 }
