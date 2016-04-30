@@ -5,6 +5,8 @@
  */
 package org.grouplens.lenskit.ihm;
 
+import org.grouplens.lenskit.hello.Example;
+
 import java.awt.BorderLayout;
 import javax.swing.JComboBox;
 
@@ -21,7 +23,7 @@ public class Ihm extends javax.swing.JFrame {
         initComponents();
         getContentPane().add(pUser, BorderLayout.SOUTH);
 
-        
+
     }
 
     /**
@@ -68,18 +70,18 @@ public class Ihm extends javax.swing.JFrame {
         javax.swing.GroupLayout pUserUserLayout = new javax.swing.GroupLayout(pUserUser);
         pUserUser.setLayout(pUserUserLayout);
         pUserUserLayout.setHorizontalGroup(
-            pUserUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pUserUserLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bUserUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                pUserUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pUserUserLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bUserUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
         );
         pUserUserLayout.setVerticalGroup(
-            pUserUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pUserUserLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bUserUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                pUserUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pUserUserLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bUserUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
         );
 
         panelBoutons.add(pUserUser);
@@ -94,18 +96,18 @@ public class Ihm extends javax.swing.JFrame {
         javax.swing.GroupLayout pItemItemLayout = new javax.swing.GroupLayout(pItemItem);
         pItemItem.setLayout(pItemItemLayout);
         pItemItemLayout.setHorizontalGroup(
-            pItemItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pItemItemLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bItemItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                pItemItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pItemItemLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bItemItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
         );
         pItemItemLayout.setVerticalGroup(
-            pItemItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pItemItemLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bItemItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                pItemItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pItemItemLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bItemItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
         );
 
         panelBoutons.add(pItemItem);
@@ -120,18 +122,18 @@ public class Ihm extends javax.swing.JFrame {
         javax.swing.GroupLayout pMatrixFactorisationLayout = new javax.swing.GroupLayout(pMatrixFactorisation);
         pMatrixFactorisation.setLayout(pMatrixFactorisationLayout);
         pMatrixFactorisationLayout.setHorizontalGroup(
-            pMatrixFactorisationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pMatrixFactorisationLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bMatrixFactorisation, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                .addContainerGap())
+                pMatrixFactorisationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pMatrixFactorisationLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bMatrixFactorisation, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                                .addContainerGap())
         );
         pMatrixFactorisationLayout.setVerticalGroup(
-            pMatrixFactorisationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMatrixFactorisationLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bMatrixFactorisation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                pMatrixFactorisationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pMatrixFactorisationLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bMatrixFactorisation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
         );
 
         panelBoutons.add(pMatrixFactorisation);
@@ -146,18 +148,18 @@ public class Ihm extends javax.swing.JFrame {
         javax.swing.GroupLayout pSlopeOneLayout = new javax.swing.GroupLayout(pSlopeOne);
         pSlopeOne.setLayout(pSlopeOneLayout);
         pSlopeOneLayout.setHorizontalGroup(
-            pSlopeOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pSlopeOneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bSlopeOne, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
-                .addContainerGap())
+                pSlopeOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pSlopeOneLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bSlopeOne, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
+                                .addContainerGap())
         );
         pSlopeOneLayout.setVerticalGroup(
-            pSlopeOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pSlopeOneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bSlopeOne, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                pSlopeOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pSlopeOneLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(bSlopeOne, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
         );
 
         panelBoutons.add(pSlopeOne);
@@ -165,31 +167,36 @@ public class Ihm extends javax.swing.JFrame {
         getContentPane().add(panelBoutons, java.awt.BorderLayout.CENTER);
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void bUserUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bUserUserMouseClicked
-        // TODO add your handling code here:
-        PalanqueExample ex = new PalanqueExample(getSelectedParameters("user"));
-        ex.run();
-    }//GEN-LAST:event_bUserUserMouseClicked
+    private String[] getSelectedParameters(String algo) {
+        String num = cbNumUser.getSelectedItem().toString();
+        System.out.println(num);
+        String[] args = new String[2];
+        args[0] = algo;
+        args[1] = num;
+        return args;
+    }
 
-    private void bItemItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bItemItemMouseClicked
-        // TODO add your handling code here:
-        PalanqueExample ex = new PalanqueExample(getSelectedParameters("item"));
+    private void bUserUserMouseClicked(java.awt.event.MouseEvent evt) {
+        Example ex = new Example(getSelectedParameters("user"));
         ex.run();
-    }//GEN-LAST:event_bItemItemMouseClicked
+    }
 
-    private void bMatrixFactorisationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bMatrixFactorisationMouseClicked
-        // TODO add your handling code here:
-        PalanqueExample ex = new PalanqueExample(getSelectedParameters("matrix"));
+    private void bItemItemMouseClicked(java.awt.event.MouseEvent evt) {
+        Example ex = new Example(getSelectedParameters("item"));
         ex.run();
-    }//GEN-LAST:event_bMatrixFactorisationMouseClicked
+    }
 
-    private void bSlopeOneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bSlopeOneMouseClicked
-        // TODO add your handling code here:
-        PalanqueExample ex = new PalanqueExample(getSelectedParameters("slope"));
+    private void bMatrixFactorisationMouseClicked(java.awt.event.MouseEvent evt) {
+        Example ex = new Example(getSelectedParameters("matrix"));
         ex.run();
-    }//GEN-LAST:event_bSlopeOneMouseClicked
+    }
+
+    private void bSlopeOneMouseClicked(java.awt.event.MouseEvent evt) {
+        Example ex = new Example(getSelectedParameters("slope"));
+        ex.run();
+    }
 
     /**
      * @param args the command line arguments
@@ -198,7 +205,7 @@ public class Ihm extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
